@@ -187,3 +187,5 @@ export const BIOMA_LABELS: Record<Bioma, string> = {
 };
 
 // timeout tratado
+
+// timeout tratado
