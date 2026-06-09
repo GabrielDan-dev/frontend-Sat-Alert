@@ -47,3 +47,5 @@ export default function FAQ() {
 }
 
 // accordion faq
+
+// accordion faq
