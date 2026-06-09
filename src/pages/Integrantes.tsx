@@ -65,3 +65,4 @@ export default function Integrantes() {
     </div>
   );
 }
+// pagina integrantes
