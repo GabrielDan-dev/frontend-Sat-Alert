@@ -114,3 +114,5 @@ export const TIPOS_ALERTA: TipoAlerta[] = [
 ];
 
 // tipos documentados
+
+// tipos documentados
