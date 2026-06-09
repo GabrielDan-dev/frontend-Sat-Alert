@@ -134,3 +134,5 @@ function Info({ label, value }: { label: string; value: string }) {
 // rota dinamica
 
 // rota dinamica
+
+// rota dinamica
