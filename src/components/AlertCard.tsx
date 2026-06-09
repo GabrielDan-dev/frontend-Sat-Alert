@@ -77,3 +77,5 @@ export default function AlertCard({ alerta }: { alerta: Alerta }) {
 // badge severidade
 
 // badge severidade
+
+// badge severidade
