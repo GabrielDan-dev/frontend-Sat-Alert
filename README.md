@@ -52,7 +52,7 @@ src/
 https://github.com/GabrielDan-dev/Frontend-Sat-Alert
 
 ### Link do Vídeo YouTube
-_[a adicionar]_
+https://youtu.be/LEAxQ2-OaUQ
 
 ### Deploy na Vercel
 https://frontend-sat-alert.vercel.app/
