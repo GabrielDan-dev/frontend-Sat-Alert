@@ -169,12 +169,40 @@ export async function deletarAlerta(id: number): Promise<void> {
   }
 }
 
+function adaptarSatelite(item: any): Satelite {
+  return {
+    id:   item.idSatelite ?? item.id,
+    nome: item.nmSatelite ?? item.nome ?? "Desconhecido",
+    tipo: item.tpSatelite ?? item.tipo ?? "",
+    pais: item.nmPais    ?? item.pais ?? "",
+  };
+}
+
+function adaptarRegiao(item: any): Regiao {
+  return {
+    id:     item.idRegiao  ?? item.id,
+    nome:   item.nmRegiao  ?? item.nome ?? "Desconhecida",
+    estado: item.nmEstado  ?? item.sgEstado ?? item.estado ?? "",
+    bioma:  item.dsBioma   ?? item.bioma ?? "Amazonia",
+  };
+}
+
 export async function getSatelites(): Promise<Satelite[]> {
-  return safeFetch<Satelite[]>("/satelites", undefined, MOCK_SATELITES);
+  try {
+    const raw = await safeFetch<any[]>("/satelites");
+    return raw.map(adaptarSatelite);
+  } catch {
+    return MOCK_SATELITES;
+  }
 }
 
 export async function getRegioes(): Promise<Regiao[]> {
-  return safeFetch<Regiao[]>("/regioes", undefined, MOCK_REGIOES);
+  try {
+    const raw = await safeFetch<any[]>("/regioes");
+    return raw.map(adaptarRegiao);
+  } catch {
+    return MOCK_REGIOES;
+  }
 }
 
 export const BIOMA_LABELS: Record<Bioma, string> = {
